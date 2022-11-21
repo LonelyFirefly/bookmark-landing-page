@@ -1,0 +1,43 @@
+:root {
+	--clr--soft-blue: hsl(231, 69%, 60%);
+	--clr--soft-red: hsl(0, 94%, 66%);
+	--clr-grayish-blue: hsl(229, 8%, 60%);
+	--clr--very-dark-blue: hsl(229, 31%, 21%);
+
+	--fs-normal: 18px;
+	--fw-normal: 400;
+	--fw-bold: 500;
+}
+
+*,
+::before,
+::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html,
+body,
+header,
+main,
+footer {
+	height: fit-content;
+}
+
+body {
+	font-family: "Rubik", sans-serif;
+	font-size: var(--fs-normal);
+	font-weight: var(--fw-normal);
+}
+
+header {
+	display: flex;
+	padding-left: 11%;
+	padding-right: auto;
+}
+
+main {
+	padding-left: 11%;
+	padding-right: 7%;
+}
