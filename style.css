@@ -55,6 +55,10 @@ main {
 	height: 25px;
 }
 
+.navbar__close-icon {
+	display: none;
+}
+
 .navbar {
 	/* display: flex; */
 	/* align-items: top; */
@@ -67,8 +71,13 @@ main {
 	display: none;
 }
 
+.navbar__logo_active {
+	display: none;
+}
+
 .navbar__menu {
 	display: flex;
+	flex-direction: row;
 	align-items: center;
 	list-style: none;
 	gap: 44px;
@@ -92,6 +101,30 @@ main {
 }
 
 @media screen and (max-width: 768px) {
+	body {
+		padding: 0;
+		margin-top: 45px;
+	}
+	header {
+		overflow: hidden;
+		margin: 0;
+		/* position: relative; */
+	}
+
+	.active {
+		background-color: var(--clr--very-dark-blue);
+		transition: 0.3s ease-out;
+		opacity: 0.95;
+	}
+
+	header.active {
+		overflow: visible;
+		/* background-color: var(--clr--very-dark-blue); */
+		transition: 0.3s ease-out;
+		/* transition: 0.3s ease-out; */
+		/* overflow-y: scroll; */
+	}
+
 	.navbar__logo,
 	.navbar__hamburger,
 	.navbar__footer {
@@ -102,12 +135,35 @@ main {
 		display: none;
 	}
 
+	.navbar__logo.disable {
+		display: none;
+	}
+
+	.navbar__logo_active.active {
+		display: block;
+	}
+
 	.navbar {
 		width: 100%;
 		height: 100%;
 		flex-direction: column;
 		gap: 80px;
 		/* display: flex; */
+	}
+	/* .navbar__logo {
+		background-color: rgb(0, 8, 255);
+		-webkit-mask: url(logo.svg) no-repeat center;
+		mask: url(logo.svg) no-repeat center;
+	} */
+
+	.navbar__hamburger.active {
+		/* transition: 10 ease-out; */
+		display: none;
+	}
+
+	.navbar__close-icon.active {
+		/* transition: 10 ease-out; */
+		display: block;
 	}
 
 	.navbar__header {
@@ -122,25 +178,24 @@ main {
 	}
 
 	.navbar__menu {
-		background-color: var(--clr--very-dark-blue);
+		transform: translate(1500%);
+		/* background-color: var(--clr--very-dark-blue); */
 		color: var(--clr--surface);
-		opacity: 0.95;
+		/* opacity: 0.95; */
 		flex-direction: column;
-		transform: translate(150%);
 		transition: 0.3s ease-out;
-		width: 110vw;
+		width: 10%;
 		height: 100vh;
+		z-index: 10;
 	}
 
 	.navbar__menu.active {
 		transform: translate(0);
+		width: 100%;
+		/* transition: 0.3s ease-out; */
 	}
 
 	.navbar__link {
 		color: var(--clr--surface);
-	}
-
-	.active {
-		background-color: var(--clr--very-dark-blue);
 	}
 }
