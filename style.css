@@ -102,6 +102,21 @@ main {
 	padding: 16px 33px;
 }
 
+.introduction {
+	display: flex;
+}
+
+.introduction__info {
+	/* width: fit-content; */
+	min-width: 245px;
+}
+
+.introduction__picture {
+	display: flex;
+	max-width: 100%;
+	max-height: auto;
+}
+
 footer {
 	background-color: var(--clr--very-dark-blue);
 	height: 88px;
