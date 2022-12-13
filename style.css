@@ -6,6 +6,7 @@
 	--clr--surface: hsl(0, 0%, 100%);
 
 	--fs-normal: 18px;
+	--fs-large: 32px;
 	--fw-normal: 400;
 	--fw-bold: 500;
 	--opacity-text: 0.7;
@@ -49,9 +50,12 @@ body {
 	font-family: "Rubik", sans-serif;
 	font-size: var(--fs-normal);
 	font-weight: var(--fw-normal);
+	overflow: hidden;
 }
 
 main {
+	/* position: relative;
+	overflow: hidden; */
 }
 
 .logo {
@@ -110,6 +114,8 @@ main {
 	width: auto;
 	height: min-content;
 	margin-bottom: 150px;
+	/* position: relative;
+	overflow: hidden; */
 }
 
 .introduction__rectangle {
@@ -134,7 +140,7 @@ main {
 }
 
 .introduction__title {
-	font-size: 45px;
+	font-size: 48px;
 	font-weight: var(--fw-bold);
 }
 
@@ -188,12 +194,17 @@ main {
 }
 
 .features__heading {
+	font-size: var(--fs-large);
 }
 
 .features__info-text {
+	opacity: var(--opacity-text);
 }
 
 .features__slide-buttons {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
 }
 
 .features__button {
