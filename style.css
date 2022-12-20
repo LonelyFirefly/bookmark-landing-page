@@ -298,6 +298,7 @@ main {
 	display: flex;
 	flex-direction: column;
 	position: relative;
+	margin-bottom: 150px;
 }
 
 .extensions__info {
@@ -333,15 +334,20 @@ main {
 	align-items: center;
 	justify-content: center;
 	max-width: 280px;
+	height: 370px;
 	height: auto;
 	border-radius: 15px;
-	-webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
-	-moz-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
-	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 0 4px 4px 3px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 4px 4px 3px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 4px 4px 3px rgba(0, 0, 0, 0.1);
+}
+.extensions__card_top {
+	margin-bottom: auto;
 }
 
 .extensions__card_center {
-	margin-top: 50px;
+	margin-top: 40px;
+	margin-bottom: 40px;
 }
 
 .extensions__card_bottom {
@@ -376,6 +382,33 @@ main {
 	margin-bottom: 20px;
 	border: none;
 	border-radius: 5px;
+}
+
+.FAQ {
+	display: flex;
+	flex-direction: column;
+}
+.FAQ__info {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	margin-bottom: 60px;
+}
+.FAQ__info-title {
+}
+.FAQ__info-text {
+}
+
+.FAQ__questions {
+}
+.FAQ__question {
+}
+.FAQ__guestion-text {
+}
+.FAQ__answer {
+}
+.FAQ__answer-text {
 }
 /* *
 *
