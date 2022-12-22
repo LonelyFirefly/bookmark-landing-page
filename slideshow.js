@@ -1,3 +1,5 @@
+"use strict";
+
 const leftButton = document.querySelector(".features__button-left");
 const centerButton = document.querySelector(".features__button-center");
 const rightButton = document.querySelector(".features__button-right");
