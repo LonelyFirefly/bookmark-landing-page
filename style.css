@@ -20,6 +20,7 @@
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
+	/* background-color: black; */
 }
 
 html,
@@ -39,10 +40,10 @@ main {
 
 header {
 	height: 46px;
-	display: flex;
+	/* display: flex;
 	flex-direction: row;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: space-between; */
 	margin-top: 45px;
 	margin-bottom: 110px;
 }
@@ -72,27 +73,26 @@ footer li {
 	list-style: none;
 }
 
-.logo {
-	width: 150px;
-	height: 25px;
-}
-
 .navbar__close-icon {
 	display: none;
 }
 
 .navbar {
+	display: flex;
+	justify-content: space-between;
 }
 
-.navbar__logo,
+.navbar__header {
+}
+
 .navbar__hamburger,
 .navbar__footer {
 	display: none;
 }
 
-.navbar__logo_active {
+/* .navbar__logo_active {
 	display: none;
-}
+} */
 
 .navbar__menu {
 	display: flex;
@@ -599,18 +599,19 @@ footer li {
 	header {
 		overflow: hidden;
 		margin: 0;
+		margin-bottom: 80px;
 	}
 
-	.active {
-		/* background-color: var(--clr--very-dark-blue);
+	/* .active {
+		background-color: var(--clr--very-dark-blue);
 		opacity: 0.95;
-		transition: 0.3s ease-out; */
-	}
+		transition: 0.3s ease-out;
+	} */
 
-	header.active {
+	/* header.active {
 		overflow: visible;
 		transition: 0.3s ease-out;
-	}
+	} */
 
 	.navbar__logo,
 	.navbar__hamburger,
@@ -618,17 +619,17 @@ footer li {
 		display: block;
 	}
 
-	.logo {
+	/* .logo {
 		display: none;
-	}
+	} */
 
-	.navbar__logo.disable {
+	/* .navbar__logo.disable {
 		display: none;
-	}
+	} */
 
-	.navbar__logo_active.active {
+	/* .navbar__logo_active.active {
 		display: block;
-	}
+	} */
 
 	.navbar {
 		width: 100%;
@@ -637,16 +638,17 @@ footer li {
 		gap: 80px;
 		/* display: flex; */
 	}
+
 	/* .navbar__logo {
 		background-color: rgb(0, 8, 255);
 		-webkit-mask: url(logo.svg) no-repeat center;
 		mask: url(logo.svg) no-repeat center;
 	} */
 
-	.navbar__hamburger.active {
-		/* transition: 10 ease-out; */
+	/* .navbar__hamburger {
+		transition: fil 0.3s ease-out;
 		display: none;
-	}
+	} */
 
 	.navbar__close-icon.active {
 		/* transition: 10 ease-out; */
