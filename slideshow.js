@@ -1,12 +1,12 @@
 "use strict";
 
-const leftButton = document.querySelector(".features__button-left");
-const centerButton = document.querySelector(".features__button-center");
-const rightButton = document.querySelector(".features__button-right");
+let leftButton = document.querySelector(".features__button-left");
+let centerButton = document.querySelector(".features__button-center");
+let rightButton = document.querySelector(".features__button-right");
 
-const leftPage = document.querySelector(".features__slideshow-page_left");
-const centerPage = document.querySelector(".features__slideshow-page_center");
-const rightPage = document.querySelector(".features__slideshow-page_right");
+let leftPage = document.querySelector(".features__slideshow-page_left");
+let centerPage = document.querySelector(".features__slideshow-page_center");
+let rightPage = document.querySelector(".features__slideshow-page_right");
 
 document.querySelectorAll(".features__button").forEach((item) =>
 	item.addEventListener("click", () => {
