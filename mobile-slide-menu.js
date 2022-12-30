@@ -1,6 +1,6 @@
 "use strict";
 
-let Menu = document.querySelector(".navbar__menu");
+let menu = document.querySelector(".navbar__menu");
 let hamburger = document.querySelector(".navbar__hamburger");
 let logo = document.querySelector(".navbar__logo");
 
@@ -15,15 +15,9 @@ function changeHamburgerIcon(hamburger) {
 	}
 }
 
-hamburger.addEventListener("click", () => {
-	changeHamburgerIcon(hamburger);
-
-	logo.classList.toggle("active");
-
+function changeLogoIcon(logo) {
 	let logoName = logo.children[0].children[0].children[0];
-	// console.log(logo.children[0].children[0].children[1].children[0]);
 	let circle = logo.children[0].children[0].children[1].children[0];
-	console.log(logo.children[0].children[0].children[1].children[1]);
 	let circleImage = logo.children[0].children[0].children[1].children[1];
 	if (!logo.classList.contains("active")) {
 		logoName.setAttribute("fill", "#FFF");
@@ -34,13 +28,21 @@ hamburger.addEventListener("click", () => {
 		circle.setAttribute("fill", "#5267DF");
 		circleImage.setAttribute("fill", "#FFF");
 	}
+	logo.classList.toggle("active");
+}
+
+hamburger.addEventListener("click", () => {
+	changeHamburgerIcon(hamburger);
+	changeLogoIcon(logo);
+
+	menu.classList.toggle("active");
 });
 
 closeIcon.addEventListener("click", () => {});
 
 document.querySelectorAll(".navbar__link").forEach((item) =>
 	item.addEventListener("click", () => {
-		Menu.classList.remove("active");
+		menu.classList.remove("active");
 		closeIcon.classList.remove("active");
 		hamburger.classList.remove("active");
 		// document.body.classList.remove("active");
