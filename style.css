@@ -112,7 +112,7 @@ footer li {
 }
 
 .navbar__item hr {
-	/* display: none; */
+	display: none;
 }
 
 .navbar__link {
@@ -263,7 +263,7 @@ footer li {
 .features__slideshow-page {
 	/* max-height: 346px; */
 	gap: 8vw;
-	transform: translate(200%);
+	transform: translate(250%);
 	transition: 0.3s ease-out;
 }
 
@@ -668,7 +668,7 @@ footer li {
 	}
 
 	.navbar__menu hr {
-		display: flex;
+		display: block;
 		/* width: 100%; */
 		height: 0px;
 		border-top: 1px solid white;

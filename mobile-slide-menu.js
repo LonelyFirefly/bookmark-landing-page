@@ -42,7 +42,6 @@ function changeBodyMargin() {
 		navbarHeader.style.paddingRight = "6%";
 		navbarHeader.style.marginTop = "45px";
 		document.body.style.marginTop = "0px";
-		menu.style.paddingTop = "140px";
 	} else {
 		header.style.paddingLeft = "11%";
 		header.style.paddingRight = "6%";
