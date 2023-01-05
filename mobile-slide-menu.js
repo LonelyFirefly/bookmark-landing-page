@@ -33,8 +33,9 @@ function changeLogoIcon(logo) {
 	logo.classList.toggle("active");
 }
 
-function changeBodyMargin() {
+function changePaddingMargin() {
 	let navbarHeader = document.querySelector(".navbar__header");
+	let activeMenu = document.querySelector(".navbar__menu.active");
 	if (menu.classList.contains("active")) {
 		header.style.padding = "0";
 		header.style.height = "auto";
@@ -45,6 +46,8 @@ function changeBodyMargin() {
 	} else {
 		header.style.paddingLeft = "11%";
 		header.style.paddingRight = "6%";
+		header.style.paddingBottom = "80px";
+
 		header.style.height = "46px";
 		navbarHeader.style.paddingLeft = "";
 		navbarHeader.style.paddingRight = "";
@@ -53,11 +56,26 @@ function changeBodyMargin() {
 	}
 }
 
+function changeBodyScroll() {
+	if (menu.classList.contains("active")) {
+		document.body.style.position = "fixed";
+		document.body.style.overflow = "hidden";
+	} else {
+		document.body.style.position = "";
+		document.body.style.overflow = "";
+	}
+}
+
+function changeBodyLayout() {
+	changePaddingMargin();
+	changeBodyScroll();
+}
+
 hamburger.addEventListener("click", () => {
 	menu.classList.toggle("active");
 	changeHamburgerIcon(hamburger);
 	changeLogoIcon(logo);
-	changeBodyMargin();
+	changeBodyLayout();
 });
 
 document.querySelectorAll(".navbar__link").forEach((item) =>
