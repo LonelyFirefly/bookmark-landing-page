@@ -5,6 +5,9 @@ let hamburger = document.querySelector(".navbar__hamburger");
 let logo = document.querySelector(".navbar__logo");
 let header = document.querySelector("header");
 
+console.log(window.scrollTop);
+console.log(window.pageXOffset);
+
 function changeHamburgerIcon(hamburger) {
 	hamburger.innerHTML =
 		'<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15"><path fill="#000000" fill-rule="evenodd" d="M8 5.379L13.303.075l2.122 2.122L10.12 7.5l5.304 5.303-2.122 2.122L8 9.62l-5.303 5.304-2.122-2.122L5.88 7.5.575 2.197 2.697.075 8 5.38z"/></svg>';
@@ -83,7 +86,5 @@ document.querySelectorAll(".navbar__link").forEach((item) =>
 		menu.classList.remove("active");
 		closeIcon.classList.remove("active");
 		hamburger.classList.remove("active");
-		// document.body.classList.remove("active");
-		// header.classList.remove("active");
 	})
 );
