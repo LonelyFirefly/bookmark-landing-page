@@ -61,10 +61,8 @@ function changePaddingMargin() {
 
 function changeBodyScroll() {
 	if (menu.classList.contains("active")) {
-		document.body.style.position = "fixed";
 		document.body.style.overflow = "hidden";
 	} else {
-		document.body.style.position = "";
 		document.body.style.overflow = "";
 	}
 }
